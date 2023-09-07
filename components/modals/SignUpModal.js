@@ -1,7 +1,6 @@
 import { closeSignupModal, openSignupModal } from "@/redux/modalSlice";
 import Modal from "@mui/material/Modal";
 
-
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -11,7 +10,7 @@ import {
 import { auth } from "@/firebase";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser, signOutUser } from "@/redux/userSlice";
+import { setUser} from "@/redux/userSlice";
 import { useRouter } from "next/router";
 export default function SignUpModal() {
   const isOpen = useSelector((state) => state.modal.signupModalOpen);
@@ -22,7 +21,7 @@ export default function SignUpModal() {
   const [password, setPassword] = useState("");
 
   async function handleGuestSignIn() {
-    await signInWithEmailAndPassword(auth, "GuestLogin101@gmail.com", "123456");
+    await signInWithEmailAndPassword(auth, "guestlogin123456@gmail.com", "123456");
   }
   async function handleSignUp() {
     const userCred = await createUserWithEmailAndPassword(

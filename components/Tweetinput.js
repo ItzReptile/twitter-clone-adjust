@@ -25,11 +25,11 @@ export default function TweetInput() {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const filePicker = useRef(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   async function handleTweet() {
-    if(!user.username){
-      dispatch(openLoginModal())
-      return 
+    if (!user.username) {
+      dispatch(openLoginModal());
+      return;
     }
     setLoading(true);
     const docRef = await addDoc(collection(db, "posts"), {
@@ -68,12 +68,11 @@ export default function TweetInput() {
     <div className="flex space-x-3 p-3 border-b border-gray-700">
       <img
         className="w-11 h-11 rounded-full object-cover"
-        src={user.photoURL || "./assets/twitter-logo.png"}
+        src={user.photoURL || '../assets/pookie.png'}
       />
-      {loading && <h1 className="text-2xl text-gray-500">
-        Uploading Post...</h1>}
-      {
-       (!loading &&  <div className="w-full">
+      {loading && <h1 className="text-2xl text-gray-500">Uploading Post...</h1>}
+      {!loading && (
+        <div className="w-full">
           <textarea
             placeholder="What's on your mind?"
             className="bg-transparent resize-none outline-none w-full min-h[50px] text-lg"
@@ -129,8 +128,8 @@ export default function TweetInput() {
               Tweet
             </button>
           </div>
-        </div>)
-      }
+        </div>
+      )}
     </div>
   );
 }
