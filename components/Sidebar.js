@@ -1,7 +1,7 @@
 import { auth } from "@/firebase";
 import { closeLoginModal, closeSignupModal } from "@/redux/modalSlice";
 import { signOutUser } from "@/redux/userSlice";
-import TwitterLogo from "../public/assets/pookie.png"
+import TwitterLogo from "/public/assets/pookie.png"
 import {
   HomeIcon,
   HashtagIcon,

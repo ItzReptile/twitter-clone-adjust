@@ -28,7 +28,7 @@ export default function PostsFeed() {
       {tweets.map((tweet) => {
         return <Tweet key={tweet.id} data={tweet.data()} id={tweet.id} />;
       })}
-      <Tweet />
+    
     </div>
   );
 }
