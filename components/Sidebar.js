@@ -1,13 +1,12 @@
 import { auth } from "@/firebase";
 import { closeLoginModal, closeSignupModal } from "@/redux/modalSlice";
 import { signOutUser } from "@/redux/userSlice";
-import TwitterLogo from "/public/rep.png"
+import TwitterLogo from "../public/rep.png"
 import {
   HomeIcon,
   HashtagIcon,
   InboxIcon,
   BookmarkIcon,
-  ClipboardIcon,
   BellIcon,
   UserIcon,
   DotsCircleHorizontalIcon,
